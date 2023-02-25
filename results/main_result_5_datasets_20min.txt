@@ -1,0 +1,70 @@
+main()
+=== Dataset iris (train size 120, test size 30, 4, features count: 4)
+temps = 20min
+  D = 2
+    Univarié...  	3.1s	gap 0.0%	Erreurs train/test 5/1	
+    Multivarié...	0.6s	gap 0.0%	Erreurs train/test 1/3	
+
+  D = 3
+    Univarié...  	38.2s	gap 0.0%	Erreurs train/test 0/1	
+    Multivarié...	1.5s	gap 0.0%	Erreurs train/test 0/4	
+
+  D = 4
+    Univarié...  	35.9s	gap 0.0%	Erreurs train/test 0/1	
+    Multivarié...	8.7s	gap 0.0%	Erreurs train/test 0/0	
+
+=== Dataset seeds (train size 168, test size 42, 6, features count: 6)
+temps = 20min
+  D = 2
+    Univarié...  	83.7s	gap 0.0%	Erreurs train/test 10/2	
+    Multivarié...	1.2s	gap 0.0%	Erreurs train/test 0/0	
+
+  D = 3
+    Univarié...  	1200.1s	gap 1.8%	Erreurs train/test 3/5	
+    Multivarié...	6.4s	gap 0.0%	Erreurs train/test 0/2	
+
+  D = 4
+    Univarié...  	306.1s	gap 0.0%	Erreurs train/test 0/5	
+    Multivarié...	6.6s	gap 0.0%	Erreurs train/test 0/3	
+
+=== Dataset wine (train size 142, test size 36, 13, features count: 13)
+temps = 20min
+  D = 2
+    Univarié...  	23.8s	gap 0.0%	Erreurs train/test 5/2	
+    Multivarié...	0.4s	gap 0.0%	Erreurs train/test 0/1	
+
+  D = 3
+    Univarié...  	19.3s	gap 0.0%	Erreurs train/test 0/3	
+    Multivarié...	0.3s	gap 0.0%	Erreurs train/test 0/1	
+
+  D = 4
+    Univarié...  	198.1s	gap 0.0%	Erreurs train/test 0/4	
+    Multivarié...	4.4s	gap 0.0%	Erreurs train/test 0/1	
+
+=== Dataset thoracic_surgery (train size 376, test size 94, 16, features count: 16)
+temps = 20min
+  D = 2
+    Univarié...  	1203.2s	gap 15.3%	Erreurs train/test 53/12	
+    Multivarié...	1200.1s	gap 7.1%	Erreurs train/test 25/20	
+
+  D = 3
+    Univarié...  	1200.1s	gap 15.7%	Erreurs train/test 51/13	
+    Multivarié...	1205.4s	gap 10.9%	Erreurs train/test 37/17	
+
+  D = 4
+    Univarié...  	1200.3s	gap 16.8%	Erreurs train/test 54/12	
+    Multivarié...	1200.4s	gap 9.3%	Erreurs train/test 32/13
+
+=== Dataset diabetes_data (train size 416, test size 104, 16, features count: 16)
+temps = 20min
+  D = 2
+    Univarié...  	614.5s	gap 0.0%	Erreurs train/test 52/13	
+    Multivarié...	7.1s	gap 0.0%	Erreurs train/test 0/1	
+
+  D = 3
+    Univarié...  	1200.2s	gap 7.5%	Erreurs train/test 29/8	
+    Multivarié...	13.0s	gap 0.0%	Erreurs train/test 0/6	
+
+  D = 4
+    Univarié...  	1200.3s	gap 6.7%	Erreurs train/test 26/8	
+    Multivarié...	57.1s	gap 0.0%	Erreurs train/test 0/2	
