@@ -62,6 +62,19 @@ function prediction_errors(T::Tree, x::Matrix{Float64}, y::Vector{Int64}, classe
     return errors
 end
 
+
+function prediction_errors_random_forest(classifier, x::Matrix{Float64}, y::Vector{})
+    y_pred = predict(classifier, x)
+
+    errors = 0
+    for i in 1:length(y)
+        if y[i] != y_pred[i]
+            errors += 1
+        end
+    end
+    return errors
+end
+
 """
 Change l'échelle des caractéristiques d'un dataset pour les situer dans [0, 1]
 

@@ -73,7 +73,7 @@ for dataSetName in ["iris", "seeds", "wine"]
 
         acc = accuracy_score(yhat,Y_test)  
     
-        println("acc", acc)
+        println("acc", acc)g
 
     end
 end
