@@ -33,7 +33,7 @@ Entrées :
 Sortie :
 - class::Vector{Int64} : class prédites (class[i] est la classe de la donnée x[i, :])
 """
-function prediction_errors(T::Tree, x::Matrix{Float64}, y::Vector{Int64}, classes::Vector{Int64})
+function prediction_errors(T::Tree, x::Matrix{Float64}, y::Vector{}, classes::Vector{})
     dataCount = length(x[:, 1])
     featuresCount = length(x[1, :])
     
@@ -61,7 +61,6 @@ function prediction_errors(T::Tree, x::Matrix{Float64}, y::Vector{Int64}, classe
     end
     return errors
 end
-
 
 function prediction_errors_random_forest(classifier, x::Matrix{Float64}, y::Vector{})
     y_pred = predict(classifier, x)

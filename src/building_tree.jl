@@ -12,7 +12,7 @@ Entrées :
 - time_limits (optionnel) : temps maximal de résolution (-1 si le temps n'est pas limité) (-1 par défaut)
 - classes : labels des classes figurant dans le dataset
 """
-function build_tree(x::Matrix{Float64}, y::Vector{Any}, D::Int64, classes; multivariate::Bool=false, time_limit::Int64 = -1, mu::Float64=10^(-4))
+function build_tree(x::Matrix{Float64}, y::Vector{}, D::Int64, classes; multivariate::Bool=false, time_limit::Int64 = -1, mu::Float64=10^(-4))
     
     dataCount = length(y) # Nombre de données d'entraînement
     featuresCount = length(x[1, :]) # Nombre de caractéristiques
@@ -165,7 +165,6 @@ Entrées :
 - mu (optionnel, utilisé en multivarié): distance minimale à gauche d'une séparation où aucune donnée ne peut se trouver (i.e., pour la séparation ax <= b, il n'y aura aucune donnée dans ]b - ax - mu, b - ax[) (10^-4 par défaut)
 - time_limits (optionnel) : temps maximal de résolution (-1 si le temps n'est pas limité) (-1 par défaut)
 """
-
 function build_tree(clusters::Vector{Cluster}, D::Int64, classes;multivariate::Bool=false, time_limit::Int64 = -1, mu::Float64=10^(-4))
     
     clusterCount = length(clusters) # Nombre de données d'entraînement
@@ -309,3 +308,4 @@ function build_tree(clusters::Vector{Cluster}, D::Int64, classes;multivariate::B
 
     return T, objective_value(m), resolution_time, gap
 end
+

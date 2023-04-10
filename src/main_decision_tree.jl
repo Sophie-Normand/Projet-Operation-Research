@@ -1,10 +1,13 @@
-include("building_tree.jl")
+include("building_decision_tree.jl")
 include("utilities.jl")
 
-function main()
+using ScikitLearn
+using DecisionTree
+
+function main_decision_tree()
 
     # Pour chaque jeu de données
-    for dataSetName in ["iris", "seeds", "wine"]
+    for dataSetName in ["iris", "seeds", "wine", "thoracic_surgery", "diabetes_data"]
         
         print("=== Dataset ", dataSetName)
 
@@ -39,26 +42,29 @@ function main()
             ## 1 - Univarié (séparation sur une seule variable à la fois)
             # Création de l'arbre
             print("    Univarié...  \t")
-            T, obj, resolution_time, gap = build_tree(X_train, Y_train, D,  classes, multivariate = false, time_limit = time_limit)
+            classifier, resolution_time, gap = build_decision_tree(X_train, Y_train, D, multivariate = false, time_limit = time_limit)
 
-            # Test de la performance de l'arbre
-            print(round(resolution_time, digits = 1), "s\t")
+
+            print(round(resolution_time, digits = 3), "s\t")
             print("gap ", round(gap, digits = 1), "%\t")
-            if T != nothing
-                print("Erreurs train/test ", prediction_errors(T,X_train,Y_train, classes))
-                print("/", prediction_errors(T,X_test,Y_test, classes), "\t")
-            end
+            print("Erreurs train/test ", prediction_errors_random_forest(classifier, X_train, Y_train))
+            print("/", prediction_errors_random_forest(classifier, X_test, Y_test), "\t")
+            
             println()
 
             ## 2 - Multivarié
             print("    Multivarié...\t")
-            T, obj, resolution_time, gap = build_tree(X_train, Y_train, D, classes, multivariate = true, time_limit = time_limit)
-            print(round(resolution_time, digits = 1), "s\t")
+            classifier, resolution_time, gap = build_decision_tree(X_train, Y_train, D, multivariate = true, time_limit = time_limit)
+
+            print(round(resolution_time, digits = 3), "s\t")
             print("gap ", round(gap, digits = 1), "%\t")
-            if T != nothing
-                print("Erreurs train/test ", prediction_errors(T,X_train,Y_train, classes))
-                print("/", prediction_errors(T,X_test,Y_test, classes), "\t")
-            end
+            print("Erreurs train/test ", prediction_errors_random_forest(classifier, X_train, Y_train))
+            print("/", prediction_errors_random_forest(classifier, X_test, Y_test), "\t")
+            
+            println("\n")
+            print("--- Arbre de décision :")
+            println("\n")
+            print_tree(classifier)
             println("\n")
         end
     end 

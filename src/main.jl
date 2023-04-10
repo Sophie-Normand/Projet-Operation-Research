@@ -1,11 +1,11 @@
-#include("building_tree.jl")
-include("test_tree.jl")
+include("building_tree.jl")
 include("utilities.jl")
 
 function main()
 
     # Pour chaque jeu de données
-    for dataSetName in ["iris", "seeds", "wine"]
+    for dataSetName in ["thoracic_surgery", "diabetes_data"]
+    #for dataSetName in ["iris", "seeds", "wine", "thoracic_surgery", "diabetes_data"]
         
         print("=== Dataset ", dataSetName)
 
@@ -29,8 +29,9 @@ function main()
         println(" (train size ", size(X_train, 1), ", test size ", size(X_test, 1), ", ", size(X_train, 2), ", features count: ", size(X_train, 2), ")")
         
         # Temps limite de la méthode de résolution en secondes
-        println("Attention : le temps est fixé à 30s pour permettre de faire des tests rapides. N'hésitez pas à l'augmenter lors du calcul des résultats finaux que vous intégrerez à votre rapport.")
-        time_limit = 30
+        #println("Attention : le temps est fixé à 30s pour permettre de faire des tests rapides. N'hésitez pas à l'augmenter lors du calcul des résultats finaux que vous intégrerez à votre rapport.")
+        println("temps = 20min")
+        time_limit = 1200
 
         # Pour chaque profondeur considérée
         for D in 2:4

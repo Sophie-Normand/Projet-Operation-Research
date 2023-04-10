@@ -1,11 +1,11 @@
 
-function build_random_forest(x::Matrix{Float64}, y::Vector{}, D::Int64; multivariate::Bool=false, time_limit::Int64 = -1)
+function build_decision_tree(x::Matrix{Float64}, y::Vector{}, D::Int64; multivariate::Bool=false, time_limit::Int64 = -1)
 
     ## Déclaration de l'objectif
     if multivariate
-        classifier = RandomForestClassifier(max_depth=D, n_subfeatures=-1, rng=42)
+        classifier = DecisionTreeClassifier(max_depth=D, rng=42) #By default, n_subfeatures = -1
     else
-        classifier = RandomForestClassifier(max_depth=D, n_subfeatures=1, rng=42)
+        classifier = DecisionTreeClassifier(max_depth=D, n_subfeatures=1, rng=42)
     end
 
     starting_time = time()

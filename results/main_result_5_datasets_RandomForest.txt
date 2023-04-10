@@ -1,0 +1,72 @@
+main_random_forest()
+=== Dataset iris (train size 120, test size 30, 4, features count: 4)
+Attention : le temps est fixé à 30s pour permettre de faire des tests rapides. N'hésitez pas à l'augmenter lors du calcul des résultats finaux que vous intégrerez à votre rapport.
+  D = 2
+    Univarié...  	0.001s	gap 5.0%	Erreurs train/test 6/3	
+    Multivarié...	0.001s	gap 4.2%	Erreurs train/test 5/1	
+
+  D = 3
+    Univarié...  	0.005s	gap 5.0%	Erreurs train/test 6/2	
+    Multivarié...	0.001s	gap 4.2%	Erreurs train/test 5/1	
+
+  D = 4
+    Univarié...  	0.001s	gap 3.3%	Erreurs train/test 4/2	
+    Multivarié...	0.003s	gap 1.7%	Erreurs train/test 2/1	
+
+=== Dataset seeds (train size 168, test size 42, 6, features count: 6)
+Attention : le temps est fixé à 30s pour permettre de faire des tests rapides. N'hésitez pas à l'augmenter lors du calcul des résultats finaux que vous intégrerez à votre rapport.
+  D = 2
+    Univarié...  	0.001s	gap 11.3%	Erreurs train/test 19/6	
+    Multivarié...	0.001s	gap 10.1%	Erreurs train/test 17/5	
+
+  D = 3
+    Univarié...  	0.001s	gap 4.8%	Erreurs train/test 8/2	
+    Multivarié...	0.002s	gap 4.8%	Erreurs train/test 8/3	
+
+  D = 4
+    Univarié...  	0.002s	gap 4.8%	Erreurs train/test 8/2	
+    Multivarié...	0.005s	gap 6.5%	Erreurs train/test 11/2	
+
+=== Dataset wine (train size 142, test size 36, 13, features count: 13)
+Attention : le temps est fixé à 30s pour permettre de faire des tests rapides. N'hésitez pas à l'augmenter lors du calcul des résultats finaux que vous intégrerez à votre rapport.
+  D = 2
+    Univarié...  	0.001s	gap 4.2%	Erreurs train/test 6/2	
+    Multivarié...	0.001s	gap 1.4%	Erreurs train/test 2/2	
+
+  D = 3
+    Univarié...  	0.001s	gap 1.4%	Erreurs train/test 2/1	
+    Multivarié...	0.002s	gap 0.0%	Erreurs train/test 0/2	
+
+  D = 4
+    Univarié...  	0.001s	gap 0.7%	Erreurs train/test 1/2	
+    Multivarié...	0.007s	gap 0.7%	Erreurs train/test 1/1	
+
+=== Dataset thoracic_surgery (train size 376, test size 94, 16, features count: 16)
+Attention : le temps est fixé à 30s pour permettre de faire des tests rapides. N'hésitez pas à l'augmenter lors du calcul des résultats finaux que vous intégrerez à votre rapport.
+  D = 2
+    Univarié...  	0.001s	gap 15.4%	Erreurs train/test 58/12	
+    Multivarié...	0.001s	gap 15.4%	Erreurs train/test 58/12	
+
+  D = 3
+    Univarié...  	0.001s	gap 15.4%	Erreurs train/test 58/12	
+    Multivarié...	0.001s	gap 15.4%	Erreurs train/test 58/12	
+
+  D = 4
+    Univarié...  	0.001s	gap 15.4%	Erreurs train/test 58/12	
+    Multivarié...	0.002s	gap 14.6%	Erreurs train/test 55/12	
+
+=== Dataset diabetes_data (train size 416, test size 104, 16, features count: 16)
+Attention : le temps est fixé à 30s pour permettre de faire des tests rapides. N'hésitez pas à l'augmenter lors du calcul des résultats finaux que vous intégrerez à votre rapport.
+  D = 2
+    Univarié...  	0.001s	gap 20.2%	Erreurs train/test 84/23	
+    Multivarié...	0.001s	gap 10.3%	Erreurs train/test 43/8	
+
+  D = 3
+    Univarié...  	0.001s	gap 11.5%	Erreurs train/test 48/12	
+    Multivarié...	0.002s	gap 11.8%	Erreurs train/test 49/9	
+
+  D = 4
+    Univarié...  	0.001s	gap 11.8%	Erreurs train/test 49/18	
+    Multivarié...	0.001s	gap 7.9%	Erreurs train/test 33/7	
+
+
